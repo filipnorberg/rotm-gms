@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+alarm[1] = room_speed;
+
 
 if !(collision_line(x, y, obj_player.x, obj_player.y,obj_wall,1,0)) {
 	cansee = true;
@@ -67,10 +69,10 @@ if (hp = 0) {
    hitcount += 1;
 }
 
-
-if canshoot  and cansee = true {
-canshoot = false;
-alarm[0] = room_speed;
+if canshoot = true {
+if shoot  and cansee = true {
+shoot = false;
+alarm[0] = room_speed * 0.1;
 with (instance_create_depth(x, y, 3, obj_blast)) {
 speed = 40;
 direction = point_direction(x, y, obj_player.x, obj_player.y) + irandom_range(3, -3) 
@@ -80,4 +82,4 @@ with instance_create_depth(x, y, 3, obj_flash) {
    direction = point_direction(x, y, obj_player.x, obj_player.y);
    image_angle = point_direction(x, y, obj_player.x, obj_player.y);
 }}
-}
+}}

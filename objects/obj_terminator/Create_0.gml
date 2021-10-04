@@ -11,3 +11,5 @@ hframe = 0;
 beenhit = false;
 
 canshoot = true;
+
+shoot = true;
